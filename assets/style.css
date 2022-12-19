@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-color: rgb(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+}
+
+header {
+    height: 60px;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header i {
+    color: white;
+    padding-top: 15px;
+    text-align: center;
+    border: 2px solid blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+header button {
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, rgb(81, 190, 230), rgb(71, 71, 247));
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    transition: .7s ease;
+}
+
+
+main {
+    padding: 20px;
+    /*background-color: bisque;*/
+    grid-row: 2 / 11;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer {
+    background-color: rgb(44, 3, 39);
+}
+
+.left-side {
+    background-color: rgba(14, 14, 14, 0.493);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-left: 50px;
+    max-height: 650px;
+}
+
+.right-side {
+    background-color: rgb(158, 93, 219);
+    background: url(imgs/Cat\ astronaut-amico\ \(1\).svg) no-repeat center center;
+    background-size: contain;
+    grid-column: 2 / 4;
+}
+
+.login-with {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-with i {
+    font-size: 1.5em;
+}
+
+.login-with div {
+    display: flex;
+    gap: 1em;
+    border: 2px solid rgba(74, 74, 247, 0.76);
+    padding: 10px;
+    align-items: center;
+    transition: .7s ease;
+    margin-bottom: 20px;
+}
+
+
+
+
+.form-main {
+    margin-top: 20px;
+}
+
+.form-main input {
+    background-color: rgb(44, 44, 44);
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+    width: 90%;
+}
+
+input:focus {
+    border: none;
+}
+
+.form-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+}
+
+
+
+.button-login {
+    margin-top: 20px;
+    width: 100%;
+    color: gray;
+}
+
+.button-login input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    border-radius: 6px;
+    padding: 15px;
+    background-image: linear-gradient(90deg, rgb(81, 190, 230), rgb(71, 71, 247));
+    color: white;
+    border: none;
+    transition: .7s ease;
+}
+
+.button-login button:hover {
+    box-shadow: 0px 0px 20px blue;
+    transform: scale(1.1);
+    transition: .7s ease;
+}
+
+.button-login a {
+    color: white;
+    font-weight: bold;
+}
+
+
+button:hover, .login-with div:hover, input[type="submit"]:hover {
+    box-shadow: 0px 0px 10px blue;
+    transform: scale(1.1);
+    transition: .7s ease;
+    cursor: pointer;
+}
+
+
+.register-button {
+    margin-top: 50px;
+}
+
+.register-button button {
+    margin-top: 20px;
+    width: 90%;
+    border-radius: 6px;
+    padding: 15px;
+    background-image: linear-gradient(90deg, rgb(231, 179, 120), rgb(196, 118, 2));
+    color: white;
+    border: none;
+    transition: .7s ease;
+}
+
+.register-button button:hover {
+    box-shadow: 0px 0px 10px rgb(255, 166, 0);
+    transform: scale(1.1);
+    transition: .7s ease;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.divisors {
+    border: 1px solid gray;;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 100%;
+    grid-row: 12;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .left-side {
+        margin: 0;
+        max-width: 500px;
+        justify-self: center;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .button-login, .register-button, .form-main {
+        margin: 10px 0px 0px 0px;
+    }
+    
+    .right-side {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .login-with div{
+        width: 45%;
+        justify-content: center;
+    }
+
+    main .left-side {
+        margin: 0;
+        grid-column: 1/5;
+        max-width: 500px;
+        justify-self: center;
+    }
+    .right-side {
+        display: none;
+    }
+
+    .login-with {
+        font-size: 0.8em;
+    }
+
+    .form-bottom {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    main .right-side {
+        width: 400px;
+        justify-self: end;
+        grid-column: 3/4;
+    }
+
+    main .left-side {
+        grid-column: 1;
+        width: 400px;
+    }
+}
